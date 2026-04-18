@@ -1,0 +1,83 @@
+/* =============================================
+   MonthlyChart.css
+   ============================================= */
+
+.monthly-chart {
+  height: 100%;
+}
+
+.monthly-chart h3 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Container for all 12 bars */
+.monthly-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 140px;
+  padding-bottom: 28px; /* Space for labels */
+  position: relative;
+}
+
+/* Each bar + its label */
+.monthly-bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.bar-amount {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+  white-space: nowrap;
+}
+
+/* The grey background track */
+.bar-track {
+  width: 100%;
+  height: 100px;
+  background: var(--bg-secondary);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* The colored fill */
+.bar-fill {
+  width: 100%;
+  background: var(--accent-dim);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.5s ease;
+  min-height: 2px; /* Always show a tiny bar even for 0 */
+}
+
+/* Current month gets accent color */
+.bar-fill.bar-current {
+  background: var(--accent);
+  border-color: var(--accent-light);
+}
+
+/* Month name label */
+.bar-label {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.bar-label-current {
+  color: var(--accent-light);
+}

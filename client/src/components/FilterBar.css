@@ -1,0 +1,48 @@
+/* =============================================
+   FilterBar.css
+   ============================================= */
+
+.filter-bar {
+  margin-bottom: 24px;
+}
+
+.filter-title {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 0; /* Override default form-group margin */
+}
+
+.filter-group label {
+  margin-bottom: 6px;
+}
+
+.filter-reset {
+  padding-bottom: 1px; /* Align button with inputs */
+  flex-shrink: 0;
+}
+
+/* Stack on small screens */
+@media (max-width: 600px) {
+  .filter-controls {
+    flex-direction: column;
+  }
+  .filter-group {
+    min-width: unset;
+    width: 100%;
+  }
+}

@@ -1,0 +1,114 @@
+/* =============================================
+   ExpenseCard.css
+   ============================================= */
+
+.expense-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  gap: 16px;
+}
+
+.expense-card:hover {
+  border-color: var(--border-light);
+  background: var(--bg-hover);
+}
+
+/* Left side */
+.expense-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0; /* Allows text to truncate */
+}
+
+.expense-icon {
+  font-size: 1.6rem;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.expense-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.expense-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expense-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.expense-date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.expense-description {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Right side */
+.expense-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.expense-amount {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 540px) {
+  .expense-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .expense-right {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+}

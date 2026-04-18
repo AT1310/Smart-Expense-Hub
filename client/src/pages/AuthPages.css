@@ -1,0 +1,79 @@
+/* =============================================
+   AuthPages.css - Shared styles for Login & Signup
+   ============================================= */
+
+/* Full viewport, centered layout */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg-primary);
+
+  /* Subtle radial glow in background */
+  background-image: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(108, 99, 255, 0.08) 0%,
+    transparent 60%
+  );
+}
+
+/* The white card in the center */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+}
+
+/* Centered logo + title area */
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-logo {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.auth-header h1 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+  font-size: 0.9rem;
+}
+
+/* The form itself */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* form-groups handle most spacing */
+}
+
+/* The "Already have an account?" link */
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* Demo credentials hint */
+.auth-demo {
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border: 1px dashed var(--border);
+}
+
+.auth-demo p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}

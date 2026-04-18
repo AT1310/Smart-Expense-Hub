@@ -1,0 +1,61 @@
+/* =============================================
+   AddEditExpensePage.css
+   ============================================= */
+
+.expense-form-page {
+  padding: 32px 0 60px;
+  min-height: calc(100vh - 64px);
+}
+
+.form-page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.form-page-header h1 {
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+}
+
+/* Constrain the form card width for better readability */
+.form-card {
+  max-width: 560px;
+}
+
+/* Two-column row for amount + category */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.char-count {
+  font-size: 0.78rem;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* Cancel + Submit buttons row */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* Stack the two-column row on small screens */
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  .form-actions .btn {
+    width: 100%;
+  }
+}
